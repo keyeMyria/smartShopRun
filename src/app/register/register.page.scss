@@ -1,0 +1,73 @@
+
+    .content{
+        --background: var(--ion-color-main, #3d5afe);
+        color: white;
+    }
+
+    .button-outer-top{
+        position: relative;    
+        width: 100%;
+        top: 20px;
+    }
+
+    .button-rounded{
+        margin: 0 auto;
+        background-color: #20BF6B;
+        display: block;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        text-align: center;
+        font-size: 80px;
+        box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    }
+
+    .list{
+        background-color: #3d5afe;
+        margin: 0 auto;
+        margin-top: 10%;
+        width: 80%;
+    }
+
+    ion-buttons{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;     
+    }
+
+    ion-fab-button{
+        padding: 10px;
+        --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    }
+
+    ion-item {
+        border-radius: 30px;
+    }
+    
+    ion-item.item {
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 20px; 
+    }
+
+    ion-item.item-btns{
+        background-color: transparent;
+    }
+
+    .custom-input{
+        text-align: center;
+    }
+
+    ion-datetime{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   .signup-btn{
+        font-size: 20px;
+        --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    }

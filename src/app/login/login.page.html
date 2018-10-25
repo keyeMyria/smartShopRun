@@ -1,0 +1,22 @@
+
+<ion-content padding class="content">
+    <ion-back-button style="color: white;" defaultHref="/firstStart"></ion-back-button>
+    <div class="button-outer-top">
+      <button class="button-rounded">
+        <img class="logo" src="../../assets/imgs/logo.svg">
+      </button>
+    </div>
+
+    <ion-list class="list">
+        <ion-item class="item">
+            <ion-input inputmode="email" placeholder="E-Mail" class="custom-input"></ion-input>
+        </ion-item>
+    
+        <ion-item class="item">
+            <ion-input inputmode="password" type="password" placeholder="Password" class="custom-input"></ion-input>
+        </ion-item>
+    
+        <ion-button mode="ios" shape="round" expand="full" color="secondary" class="login-btn" (click)="login()">Login</ion-button>
+    </ion-list>
+    
+</ion-content>

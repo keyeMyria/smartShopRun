@@ -1,0 +1,7 @@
+{
+  "name": "smartShopRun",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

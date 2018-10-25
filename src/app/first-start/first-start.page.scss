@@ -1,0 +1,143 @@
+
+    .content{
+        background: #3D5AFE;
+        color: white;
+    }
+
+    .no-scroll .scroll-content{
+        overflow: hidden;
+    }
+
+    .title-outer{
+        position: relative;
+        text-align: center;
+        top: 10vh;    
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .logo{
+        max-height: 80%;
+        max-width: 80%;
+    }
+
+    .button-outer{
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-rounded{
+        margin: 0 auto;
+        background-color: #20BF6B;
+        display: block;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        text-align: center;
+        font-size: 80px;
+        box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    }
+
+    //----------------------------------------------- slides -----------------------------------------------
+    #slides{
+        height: 100%;
+        width: 100%;     
+    }   
+
+    #slide{
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .custom-bullets {
+        --bullet-background: #fff;
+        --bullet-background-active: #20BF6B;
+    }
+
+    .swiper-pagination{
+        position: absolute;
+        bottom: 40% !important;
+    }
+
+    .slide-title{ 
+        position: relative;      
+        top: 10%;
+        font-size: 25px;
+    }
+
+    .green-box{
+        position: absolute;
+        background-color: #20BF6B;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        height: 45vh;
+        width: 80%;
+        box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    }
+
+    .get-started-button{
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 80%;
+        font-size: 24px;
+        transform: translate(-50%,-50%);
+    }
+
+    ion-slide.swiper-slide {
+        align-items: flex-start;
+    }
+
+    //------------------------------------------- Register Login Section----------------------------------------------------------
+
+    .home-btn{
+        background-color: rgba(255, 255, 255, 0);
+
+        ion-icon{
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    .button-outer-top{
+        position: relative;    
+        width: 100%;
+        top: 15px;
+    }
+
+    .signup-btn{
+        position: absolute;
+        text-align: center;
+        width: 60%;
+        top: 60%; left: 50%;   
+        transform: translate(-50%,-50%);  
+   
+        ion-button{
+            --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+            font-size: 20px; 
+        }
+    }
+
+    .login-btn{
+        position: absolute;
+        text-align: center;
+        top: 80%; left: 50%;
+        width: 60%;
+        transform: translate(-50%,-50%);   
+
+        ion-button{
+            --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+            font-size: 20px; 
+        }   
+    }

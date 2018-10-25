@@ -1,0 +1,43 @@
+
+<ion-content padding class="content">
+    <ion-back-button style="color: white;" defaultHref="/firstStart"></ion-back-button>
+    <div class="button-outer-top">
+        <button class="button-rounded">
+            <img class="logo" src="../../assets/imgs/logo.svg">
+        </button>
+    </div>
+
+    <ion-list class="list">
+      
+      <ion-item class="item-btns" lines="none">
+        <ion-buttons>
+          <ion-fab-button color="secondary">
+              <ion-icon style="color: white" name="mail"></ion-icon>                        
+          </ion-fab-button>
+    
+          <ion-fab-button color="secondary">
+              <ion-icon style="color: white" name="logo-facebook"></ion-icon>
+          </ion-fab-button>
+          
+        </ion-buttons>
+      </ion-item>
+      <ion-item class="item" lines="none">
+          <ion-input type="email" inputmode="email" placeholder="E-Mail*" class="custom-input"></ion-input>
+      </ion-item>
+  
+      <ion-item class="item" lines="none">
+          <ion-input type="password" inputmode="password" placeholder="Password*" class="custom-input"></ion-input>
+      </ion-item>
+  
+      <ion-item class="item" lines="none">
+          <ion-input type="text" inputmode="text" placeholder="Name*" class="custom-input"></ion-input>
+      </ion-item>
+  
+      <ion-item class="item" lines="none">
+          <ion-datetime placeholder="Date of Birth*" displayFormat="DD/MM/YYYY"></ion-datetime>
+      </ion-item>
+  
+      <ion-button mode="ios" shape="round" expand="full" color="secondary" class="signup-btn" (click)="register()">Signup</ion-button>
+    </ion-list>
+    
+</ion-content>
