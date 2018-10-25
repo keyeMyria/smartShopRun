@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
    * Bei erfolgreichem Login => weiter an HomePage
    */
   login(){
-    this.navCtrl.navigateRoot("home");
+    this.navCtrl.navigateRoot("/home");
   }
 
 }

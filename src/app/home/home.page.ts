@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { User } from '../../models/user.interface';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +11,10 @@ export class HomePage {
 
   firstStart: boolean = false;
   loggedin: boolean = false;
-  register: boolean = true;
+  register: boolean = false;
   notLoggedin: boolean = false;
+
+  user = {} as User;
 
   constructor(
     private navCtrl: NavController) {
