@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { LocalStorageService } from '../../services/local-storage.service';
+import { User } from '../../models/user.interface';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,9 @@ import { LocalStorageService } from '../../services/local-storage.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+
+  user = {} as User;
+  keepLoggedin: boolean = false;
 
   constructor(
     private navCtrl: NavController,
@@ -22,8 +26,11 @@ export class LoginPage implements OnInit {
    * Legged den user ein.
    * Bei erfolgreichem Login => weiter an HomePage
    */
-  login(){
-    this.navCtrl.navigateRoot("/home");
+  login(user : User){
+    this.storageService.saveInStorage("user", user)
+      .then(()=>{
+        this.navCtrl.navigateRoot("/home");
+      });
   }
 
 }

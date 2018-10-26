@@ -52,6 +52,19 @@
         text-align: center;
     }
 
+    .inline-flex-parent{
+        display: inline-flex;
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
+    .child{
+        padding: 5px;
+    }
+    
+
     .login-btn{
         font-size: 20px;
         --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);        

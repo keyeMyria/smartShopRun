@@ -28,4 +28,11 @@ export class LocalStorageService {
     // get a key/value pair
     return this.storage.get(key);
   }
+
+  /**
+   * Löscht Daten aus dem lokalen Speicher, mit dem key
+   */
+  deleteFromStorage(key: string){
+    return this.storage.remove(key);
+  }
 }

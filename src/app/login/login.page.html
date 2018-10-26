@@ -9,14 +9,19 @@
 
     <ion-list class="list">
         <ion-item class="item" lines="none">
-            <ion-input inputmode="email" type="email" placeholder="E-Mail" class="custom-input"></ion-input>
+            <ion-input inputmode="email" type="email" placeholder="E-Mail" class="custom-input" [(ngModel)]="user.email"></ion-input>
         </ion-item>
     
         <ion-item class="item" lines="none">
-            <ion-input inputmode="password" type="password" placeholder="Password" class="custom-input"></ion-input>
+            <ion-input inputmode="password" type="password" placeholder="Password" class="custom-input" [(ngModel)]="user.password"></ion-input>
         </ion-item>
-    
-        <ion-button mode="ios" shape="round" expand="full" color="secondary" class="login-btn" (click)="login()">Login</ion-button>
+        
+        <div class='parent inline-flex-parent'>
+            <p class="child">Keep loggedin</p>
+            <ion-checkbox class="child" mode="ios" color="secondary" [(ngModel)]="keepLoggedin"></ion-checkbox>
+        </div>
+                  
+        <ion-button mode="ios" shape="round" expand="full" color="secondary" class="login-btn" (click)="login(user)">Login</ion-button>
     </ion-list>
     
 </ion-content>

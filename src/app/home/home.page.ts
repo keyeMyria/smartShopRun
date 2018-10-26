@@ -45,14 +45,10 @@ export class HomePage {
               if(keepLoggedIn){
                 console.log("keepLoggedIn")
                 console.log(keepLoggedIn)
-                this.storageService.getFromStorage("user")
-                  .then((curUser)=>{
-                    console.log(curUser)
-                    this.user = curUser;
-                    this.navCtrl.navigateRoot("/home");
-                  });
+                this.getUser();
               }
-              else{   
+              else{
+                this.storageService.deleteFromStorage("user");   
                 console.log("keepLoggedIn")
                 console.log(keepLoggedIn)
                 this.navCtrl.navigateRoot("/login-register");
@@ -60,5 +56,17 @@ export class HomePage {
             });   
         }
       });  
+  }
+
+  /**
+   * Besorgt die Daten des eingeloggten Users aus dem local Storage
+   */
+  getUser(){
+    this.storageService.getFromStorage("user")
+    .then((curUser)=>{
+      console.log(curUser)
+      this.user = curUser;
+      this.navCtrl.navigateRoot("/home");
+    });
   }
 }
