@@ -1,26 +1,36 @@
+<ion-header no-border>
+    <ion-toolbar mode="ios">
+        <ion-back-button style="color: white;" defaultHref="/login-register"></ion-back-button>        
+    </ion-toolbar>
+</ion-header>
 
-<ion-content padding class="content">
-    <ion-back-button style="color: white;" defaultHref="/firstStart"></ion-back-button>
+<ion-content padding class="content" fullscreen>
     <div class="button-outer-top">
       <button class="button-rounded">
-        <img class="logo" src="../../assets/imgs/logo.svg">
+        <img src="../../assets/imgs/logo.svg">
       </button>
     </div>
 
     <ion-list class="list">
         <ion-item class="item" lines="none">
             <ion-input inputmode="email" type="email" placeholder="E-Mail" class="custom-input" [(ngModel)]="user.email"></ion-input>
+            <button *ngIf="user.email" class="delete-btn" (click)="deleteInput('email')">
+                <ion-icon name="close"></ion-icon>
+            </button> 
         </ion-item>
     
         <ion-item class="item" lines="none">
             <ion-input inputmode="password" type="password" placeholder="Password" class="custom-input" [(ngModel)]="user.password"></ion-input>
+            <button *ngIf="user.password" class="delete-btn" (click)="deleteInput('password')">
+                <ion-icon name="close"></ion-icon>
+            </button> 
         </ion-item>
         
         <div class='parent inline-flex-parent'>
             <p class="child">Keep loggedin</p>
             <ion-checkbox class="child" mode="ios" color="secondary" [(ngModel)]="keepLoggedin"></ion-checkbox>
         </div>
-                  
+          
         <ion-button mode="ios" shape="round" expand="full" color="secondary" class="login-btn" (click)="login(user)">Login</ion-button>
     </ion-list>
     

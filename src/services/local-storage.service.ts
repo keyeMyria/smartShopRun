@@ -22,7 +22,8 @@ export class LocalStorageService {
    * Daten: 
    *    User,
    *    alreadyStarted,
-   *    keepLoggedin
+   *    keepLoggedin,
+   *    oneTimeLoggin
    */
   getFromStorage(key: string){
     // get a key/value pair

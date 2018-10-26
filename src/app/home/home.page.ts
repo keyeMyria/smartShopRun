@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { User } from '../../models/user.interface';
 import { LocalStorageService } from '../../services/local-storage.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,15 +17,37 @@ export class HomePage {
   notLoggedin: boolean = false;
 
   user = {} as User;
+  
+  id: number;
+  private sub: any;
 
   constructor(
     private navCtrl: NavController,
-    private storageService: LocalStorageService) {
+    private storageService: LocalStorageService,
+    private route: ActivatedRoute) {
 
      }
 
   ngOnInit() {
-    this.getStatus();
+    this.getRoute();
+    //this.getStatus();
+  }
+
+  /**
+   * Daten aus der url extrahieren
+   */
+  getRoute(){
+    this.sub = this.route.params.subscribe(params => {
+      this.id = params['id'];
+      if(this.id){
+        console.log("got data")
+      }
+      else{
+        console.log("got NO data")
+        
+      }
+      // In a real app: dispatch action to load the details here.
+   });
   }
 
   /**
@@ -36,26 +59,30 @@ export class HomePage {
       .then((alreadyStarted)=>{
         // erster start, da wert noch nicht in storage
         if(!alreadyStarted){
-          console.log("not started jet")
-          this.navCtrl.navigateRoot("/firstStart");
+          console.log("/firstStart")
+          this.navCtrl.navigateRoot("/firstStart");         
         }
-        if(alreadyStarted){
-          this.storageService.getFromStorage("keepLoggedin")
-            .then((keepLoggedIn)=>{
-              if(keepLoggedIn){
-                console.log("keepLoggedIn")
-                console.log(keepLoggedIn)
-                this.getUser();
-              }
-              else{
-                this.storageService.deleteFromStorage("user");   
-                console.log("keepLoggedIn")
-                console.log(keepLoggedIn)
-                this.navCtrl.navigateRoot("/login-register");
-              }
-            });   
+        else{
+          this.autoLogin();
         }
       });  
+  }
+
+  /**
+   * Funktion für das automatische einloggen
+   */
+  autoLogin(){
+    this.storageService.getFromStorage("keepLoggedin")
+    .then((keepLoggedIn)=>{
+      if(keepLoggedIn){
+        this.getUser();
+        console.log("/stayHome");
+      }
+      else{
+        this.storageService.deleteFromStorage("user");
+        this.navCtrl.navigateRoot("/login-register");
+      }
+    });   
   }
 
   /**

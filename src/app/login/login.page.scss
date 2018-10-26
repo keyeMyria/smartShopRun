@@ -1,35 +1,37 @@
 
+    ion-toolbar {
+        --background: transparent;
+        --ion-color-base: transparent;
+    }
+    
     .content{
         --background: var(--ion-color-main, #3d5afe);
         color: white;
-    }
-
-    .logo{
-        max-height: 80%;
-        max-width: 80%;
-    }
+    } 
 
     .button-outer-top{
-        position: relative;    
+        position: relative;   
+        text-align: center; 
         width: 100%;
         top: 20px;
     }
-
+  
     .button-rounded{
-        margin: 0 auto;
-        background-color: #20BF6B;
-        display: block;
-        width: 200px;
-        height: 200px;
-        text-align: center;
-        align-content: center;
-        align-items: center;
+        width: 214px;
+        height: 214px;
         border-radius: 50%;
         -moz-border-radius: 50%;
         -webkit-border-radius: 50%;
-        text-align: center;
-        font-size: 80px;
+        overflow: hidden;
+        background: #20BF6B;
         box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    }
+
+    .button-rounded img {
+        display: block;
+        width: 100%;
+        padding: 12%;
+        height: auto;
     }
 
     .list{
@@ -37,6 +39,20 @@
         margin: 0 auto;
         margin-top: 10%;
         width: 80%;
+    }
+
+    .delete-btn{
+        background-color: transparent;
+        border: none;
+        outline:none;
+        position: absolute;
+        right: 10px;
+        color: rgba(0, 0, 0, 0.5);
+
+        ion-icon{
+            width: 20px;
+            height: 20px;
+        }
     }
 
     ion-item {
