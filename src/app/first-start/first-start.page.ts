@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-first-start',
@@ -8,42 +9,27 @@ import { NavController } from '@ionic/angular';
 })
 export class FirstStartPage implements OnInit {
 
-  showSlides: boolean = false;
-  showBtns: boolean = false;
-
   constructor(
-    private navCtrl: NavController) { 
+    private navCtrl: NavController,
+    private storageService: LocalStorageService) { 
 
     }
 
   ngOnInit() {
+    this.saveInStorage();
   }
 
   /**
-   * Zeigt die Slides beim ersten öffnen der App nach Betätigung des "Einkaufswagen" Buttons
-   */
-  aktivateSlides(){
-    this.showSlides = true;
-  }
-
-  /**
-   * Zeigt die Buttons Login oder Register nach Betätigen des "Let's get you started" Buttons
+   * Öffnet die Login-Register Page
    */
   showLoginRegister(){
-    this.showSlides = false;
-    this.showBtns = true;
+    this.navCtrl.navigateRoot("/login-register")
   }
 
   /**
-   * Öffnet wahlweise die Login oder Register Page
-   * @param page 
+   * Speichert in den lokalen Storage, dass das App Tutorial abgespielt wurde
    */
-  openPage(page: string){
-    if(page=="LoginPage"){
-      this.navCtrl.navigateForward("/login")  
-    }
-    else{
-      this.navCtrl.navigateForward("/register")
-    }
+  saveInStorage(){
+    this.storageService.saveInStorage("alreadyStarted", true);
   }
 }

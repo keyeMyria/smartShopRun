@@ -99,45 +99,4 @@
         align-items: flex-start;
     }
 
-    //------------------------------------------- Register Login Section----------------------------------------------------------
-
-    .home-btn{
-        background-color: rgba(255, 255, 255, 0);
-
-        ion-icon{
-            width: 35px;
-            height: 35px;
-        }
-    }
-
-    .button-outer-top{
-        position: relative;    
-        width: 100%;
-        top: 15px;
-    }
-
-    .signup-btn{
-        position: absolute;
-        text-align: center;
-        width: 60%;
-        top: 60%; left: 50%;   
-        transform: translate(-50%,-50%);  
-   
-        ion-button{
-            --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
-            font-size: 20px; 
-        }
-    }
-
-    .login-btn{
-        position: absolute;
-        text-align: center;
-        top: 80%; left: 50%;
-        width: 60%;
-        transform: translate(-50%,-50%);   
-
-        ion-button{
-            --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
-            font-size: 20px; 
-        }   
-    }
+    

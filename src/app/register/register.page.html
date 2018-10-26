@@ -22,22 +22,22 @@
         </ion-buttons>
       </ion-item>
       <ion-item class="item" lines="none">
-          <ion-input type="email" inputmode="email" placeholder="E-Mail*" class="custom-input"></ion-input>
+          <ion-input type="email" inputmode="email" placeholder="E-Mail*" class="custom-input" [(ngModel)]="user.email"></ion-input>
       </ion-item>
   
       <ion-item class="item" lines="none">
-          <ion-input type="password" inputmode="password" placeholder="Password*" class="custom-input"></ion-input>
+          <ion-input type="password" inputmode="password" placeholder="Password*" class="custom-input" [(ngModel)]="user.password"></ion-input>
       </ion-item>
   
       <ion-item class="item" lines="none">
-          <ion-input type="text" inputmode="text" placeholder="Name*" class="custom-input"></ion-input>
+          <ion-input type="text" inputmode="text" placeholder="Name*" class="custom-input" [(ngModel)]="user.name"></ion-input>
       </ion-item>
   
       <ion-item class="item" lines="none">
-          <ion-datetime placeholder="Date of Birth*" displayFormat="DD/MM/YYYY"></ion-datetime>
+          <ion-datetime placeholder="Date of Birth*" displayFormat="DD/MM/YYYY" [(ngModel)]="user.birthDate"></ion-datetime>
       </ion-item>
   
-      <ion-button mode="ios" shape="round" expand="full" color="secondary" class="signup-btn" (click)="register()">Signup</ion-button>
+      <ion-button mode="ios" shape="round" expand="full" color="secondary" class="signup-btn" (click)="register(user)">Signup</ion-button>
     </ion-list>
     
 </ion-content>

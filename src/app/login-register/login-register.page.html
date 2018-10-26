@@ -1,0 +1,19 @@
+
+<ion-content padding class="content">
+  <button class="home-btn">
+    <ion-icon style="color: white" name="home"></ion-icon>
+  </button>
+  <div class="button-outer-top">
+    <button color="secondary" class="button-rounded">
+      <img class="logo" src="../../assets/imgs/logo.svg">
+    </button>
+  </div>
+  <div class="signup-btn">
+    <ion-button mode="ios" shape="round" expand="full" color="secondary" (click)="openPage('RegisterPage')">Signup</ion-button>
+    <p>Via Facebook or E-Mail</p>
+  </div>
+  <div class="login-btn">
+    <ion-button mode="ios" shape="round" expand="full" color="secondary" (click)="openPage('LoginPage')">Login</ion-button>
+    <p>With an already existing account</p>
+  </div>
+</ion-content>

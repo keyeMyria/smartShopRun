@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,8 @@ import { NavController } from '@ionic/angular';
 export class LoginPage implements OnInit {
 
   constructor(
-    private navCtrl: NavController) { 
+    private navCtrl: NavController,
+    private storageService: LocalStorageService) { 
 
     }
 

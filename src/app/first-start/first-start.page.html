@@ -1,10 +1,7 @@
 
 <ion-content padding color="main" class="content">
 
-  <button class="home-btn" *ngIf="showBtns">
-    <ion-icon style="color: white" name="home"></ion-icon>
-  </button>
-
+  <!--
   <div *ngIf="!showSlides && !showBtns">
     <div class="title-outer">
       <h1 class="title">RunShopRun</h1>
@@ -15,9 +12,9 @@
         <img class="logo" src="../../assets/imgs/logo.svg">
       </button>
     </div>
-  </div>
+  </div>-->
 
-  <ion-slides *ngIf="showSlides" id="slides" pager class="custom-bullets">
+  <ion-slides id="slides" pager class="custom-bullets">
     <ion-slide id="slide">
       <h2 class="slide-title">This is some subtext<br>headline.</h2>    
       <div class="green-box"></div>
@@ -34,20 +31,5 @@
       <ion-button class="get-started-button" mode="ios" shape="round" expand="full" color="secondary" (click)="showLoginRegister()">Let's get you started!</ion-button>
     </ion-slide>
   </ion-slides>
-
-  <div *ngIf="showBtns && !showSlides">
-    <div class="button-outer-top">
-      <button color="secondary" class="button-rounded">
-        <img class="logo" src="../../assets/imgs/logo.svg">
-      </button>
-    </div>
-    <div class="signup-btn">
-      <ion-button mode="ios" shape="round" expand="full" color="secondary" (click)="openPage('RegisterPage')">Signup</ion-button>
-      <p>Via Facebook or E-Mail</p>
-    </div>
-    <div class="login-btn">
-      <ion-button mode="ios" shape="round" expand="full" color="secondary" (click)="openPage('LoginPage')">Login</ion-button>
-      <p>With an already existing account</p>
-    </div>
-  </div>
+  
 </ion-content>
