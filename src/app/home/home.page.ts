@@ -43,8 +43,7 @@ export class HomePage {
         console.log("got data")
       }
       else{
-        console.log("got NO data")
-        
+        this.autoLogin();
       }
       // In a real app: dispatch action to load the details here.
    });
@@ -95,5 +94,14 @@ export class HomePage {
       this.user = curUser;
       this.navCtrl.navigateRoot("/home");
     });
+  }
+
+  /**
+   * Den aktuellen user ausloggen
+   */
+  logout(){
+    this.storageService.deleteFromStorage("user");
+    this.storageService.deleteFromStorage("keepLoggedin");
+    this.navCtrl.navigateRoot("/login-register");
   }
 }
