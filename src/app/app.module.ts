@@ -14,26 +14,21 @@ import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
-  FacebookLoginProvider,
-  LinkedinLoginProvider,
+  FacebookLoginProvider
 } from "angular-6-social-login";
 
-// Configs 
+// Configs for social media login
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
       [
         {
           id: FacebookLoginProvider.PROVIDER_ID,
-          provider: new FacebookLoginProvider("Your-Facebook-app-id")
+          provider: new FacebookLoginProvider("273370076645747")
         },
         {
           id: GoogleLoginProvider.PROVIDER_ID,
           provider: new GoogleLoginProvider("Your-Google-Client-Id")
-        },
-          {
-            id: LinkedinLoginProvider.PROVIDER_ID,
-            provider: new LinkedinLoginProvider("1098828800522-m2ig6bieilc3tpqvmlcpdvrpvn86q4ks.apps.googleusercontent.com")
-          }
+        }
       ]
   );
   return config;

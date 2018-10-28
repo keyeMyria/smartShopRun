@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController } from '@ionic/angular';
 import { LocalStorageService } from '../../services/local-storage/local-storage.service';
 import { User } from '../../models/user.interface';
+import { SozialLoginService } from '../../services/sozial-login/sozial-login.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginPage implements OnInit {
   constructor(
     private navCtrl: NavController,
     private storageService: LocalStorageService,
-    private toastCtrl: ToastController) { 
+    private toastCtrl: ToastController,
+    private sozialLoginService: SozialLoginService) { 
 
     }
 
@@ -35,7 +37,7 @@ export class LoginPage implements OnInit {
         if(this.keepLoggedin){
           this.storageService.saveInStorage("keepLoggedin", true)
           .then(()=>{
-            this.navCtrl.navigateRoot("/home");
+            this.navCtrl.navigateRoot("/home/" + "fromLogin");
           });
         }
         else{
@@ -49,6 +51,16 @@ export class LoginPage implements OnInit {
     else{
       this.showToast("Please fill in all loggin information.");
     }
+  }
+
+  /**
+   * Der login über Facebook
+   */
+  loginWithFacebook(){
+    this.sozialLoginService.socialSignIn('facebook')
+      .then(userData =>{
+        console.log(userData);
+      });
   }
 
   /**

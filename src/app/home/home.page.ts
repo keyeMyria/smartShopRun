@@ -40,23 +40,22 @@ export class HomePage {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
       if(this.id){
-        console.log("got data")
+        this.getUser();
       }
       else{
-        this.autoLogin();
+        this.getStatus();
       }
       // In a real app: dispatch action to load the details here.
    });
   }
 
   /**
-   * Vor dem App Start überprüfen, ob ein erst Start vorhanden ist
+   * Vor dem App Start überprüfen, ob ein erst Start vorhanden ist und evl. Tutorial anzeigen
    */
   getStatus(){
-    //this.storageService.saveInStorage("alreadyStarted", false);
     this.storageService.getFromStorage("alreadyStarted")
       .then((alreadyStarted)=>{
-        // erster start, da wert noch nicht in storage
+        // erster start, da Wert noch nicht in storage
         if(!alreadyStarted){
           console.log("/firstStart")
           this.navCtrl.navigateRoot("/firstStart");         
@@ -78,8 +77,10 @@ export class HomePage {
         console.log("/stayHome");
       }
       else{
-        this.storageService.deleteFromStorage("user");
-        this.navCtrl.navigateRoot("/login-register");
+        // ToDo:  wieder einkommentieren
+        this.getUser();
+        //this.storageService.deleteFromStorage("user");
+        //this.navCtrl.navigateRoot("/login-register");
       }
     });   
   }
@@ -92,7 +93,6 @@ export class HomePage {
     .then((curUser)=>{
       console.log(curUser)
       this.user = curUser;
-      this.navCtrl.navigateRoot("/home");
     });
   }
 
