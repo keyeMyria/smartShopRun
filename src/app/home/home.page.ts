@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { User } from '../../models/user.interface';
-import { LocalStorageService } from '../../services/local-storage.service';
+import { LocalStorageService } from '../../services/local-storage/local-storage.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

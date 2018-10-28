@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController } from '@ionic/angular';
-import { LocalStorageService } from '../../services/local-storage.service';
+import { LocalStorageService } from '../../services/local-storage/local-storage.service';
 import { User } from '../../models/user.interface';
 
 @Component({
