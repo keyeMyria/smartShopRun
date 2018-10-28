@@ -1,11 +1,12 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">  
+    <ion-menu-button style="color: white" slot="start"></ion-menu-button>
     <ion-title>
       Hello {{user.name}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding class="content">
+<ion-content padding class="light">
     <ion-button shape="round" (click)="logout()">Round Button</ion-button>
 </ion-content>
