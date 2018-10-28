@@ -24,12 +24,12 @@ export class LoginPage implements OnInit {
   }
 
   /**
-   * Legged den user ein.
+   * Meldet den user an.
    * Bei erfolgreichem Login => weiter an HomePage
    * Wenn keepLoggedin checked, wird in local Storage vermerkt
    */
   login(user : User){
-    if(user.email != "" && user.password != "" && user.email != undefined && user.password != undefined){
+    if(user.email != "" && user.password1 != "" && user.email != undefined && user.password1 != undefined){
     this.storageService.saveInStorage("user", user)
       .then(()=>{
         if(this.keepLoggedin){
@@ -42,7 +42,7 @@ export class LoginPage implements OnInit {
           this.storageService.saveInStorage("oneTimeLoggin", true)
           .then(()=>{
             this.navCtrl.navigateRoot("/home/" + "fromLogin");
-          })
+          });
         }       
       });
     }
@@ -60,7 +60,7 @@ export class LoginPage implements OnInit {
         this.user.email = ""
         break;
       case "password":
-        this.user.password = ""
+        this.user.password1 = ""
         break;
     }
   }

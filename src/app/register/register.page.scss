@@ -74,6 +74,20 @@
         margin-right: auto;
     }
 
+    .delete-btn{
+        background-color: transparent;
+        border: none;
+        outline:none;
+        position: absolute;
+        right: 10px;
+        color: rgba(0, 0, 0, 0.5);
+
+        ion-icon{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
    .signup-btn{
         font-size: 20px;
         --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
