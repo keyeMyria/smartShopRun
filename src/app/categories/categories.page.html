@@ -1,0 +1,18 @@
+<ion-header no-border>
+  <ion-toolbar>  
+    <ion-menu-button style="color: white" slot="start"></ion-menu-button>
+    <ion-button expand="full" shape="round" color="secondary">Categories</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding fullscreen class="content">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let test of testCats">
+        <ion-button color="secondary">{{test.name}}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

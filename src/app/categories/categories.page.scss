@@ -18,14 +18,14 @@
     .content{
         --background: var(--ion-color-main, #3d5afe);
         color: white;
-    } 
-
-    ion-list{
-        background-color: var(--ion-color-main, #3d5afe);  
-        ion-button{
-            --height: 10vh; 
-            --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);    
-            margin-bottom: 5%;
-        }      
     }
 
+    ion-col{
+        ion-button{
+            font-size: 2.5vw;
+            --width: 20vw;
+            --height: 20vw;
+            --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);    
+            --border-radius: 15px;
+        }
+    }
