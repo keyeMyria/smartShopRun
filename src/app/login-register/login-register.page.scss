@@ -57,6 +57,7 @@
         ion-button{
             --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
             font-size: 20px; 
+            text-transform: none;
         }
     }
 
@@ -71,5 +72,6 @@
         ion-button{
             --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
             font-size: 20px; 
+            text-transform: none;
         }   
     }
