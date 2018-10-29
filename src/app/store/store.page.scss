@@ -18,15 +18,13 @@
     .content{
         --background: var(--ion-color-main, #3d5afe);
         color: white;
-    }
+    } 
 
-    ion-col{
+    ion-list{
+        background-color: var(--ion-color-main, #3d5afe);  
         ion-button{
-            font-size: 2.5vw;
-            text-transform: none;
-            --width: 20vw;
-            --height: 20vw;
+            --height: 10vh; 
             --box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);    
-            --border-radius: 15px;
-        }
+            margin-bottom: 5%;
+        }      
     }

@@ -1,0 +1,8 @@
+
+  <ion-list lines="none">
+    <ion-menu-toggle *ngFor="let p of appPages">
+      <ion-button [href]="p.url" routerDirection="root" color="secondary" shape="round" expand="block">{{p.title}}</ion-button>
+      <div class="underline"></div>
+    </ion-menu-toggle>
+  </ion-list>
+

@@ -16,6 +16,7 @@ import {
   GoogleLoginProvider,
   FacebookLoginProvider
 } from "angular-6-social-login";
+import { MenuComponent } from './menu/menu.component';
 
 // Configs for social media login
 export function getAuthServiceConfigs() {
@@ -35,7 +36,7 @@ export function getAuthServiceConfigs() {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MenuComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(), SocialLoginModule],
   providers: [
